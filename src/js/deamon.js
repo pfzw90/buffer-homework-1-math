@@ -1,8 +1,8 @@
-import Magician from './magician';
+import MathChar from './mathchar';
 
-export default class Deamon extends Magician {
-  constructor(name, attack) {
-    super(name, attack);
-    this.class = 'Deamon';
+export default class Daemon extends MathChar {
+  constructor(name) {
+    super(name);
+    this.class = 'Daemon';
   }
 }

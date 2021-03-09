@@ -1,24 +1,9 @@
-import Character from './character';
+import MathChar from './mathchar';
 
 
-export default class Magician extends Character {
-  constructor(name, attack) {
-    super(name, attack);
-    this.stoned = false;
+export default class Magician extends MathChar {
+  constructor(name) {
+    super(name);
     this.class = 'Magician';
-  }
-
-  setStoned(stoned) {
-    this.stoned = stoned;
-  }
-
-  get getStoned() {
-    return this.stoned;
-  }
-
-  setAttack(space) {
-    if (space >= 10) this.attackModifier = 0;
-    else this.attackModifier -= space / 10;
-    if (this.getStoned) this.attackBonus -= Math.log2(space) * 5;
   }
 }
